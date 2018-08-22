@@ -51,6 +51,7 @@ PaginatedSubscriptionHandle.prototype.reset = function() {
 
 PaginatedSubscriptionHandle.prototype.filterPage = function(filter) {
   this._filter = filter;
+  this._limit = this.perPage;
   this._filterListeners.changed();
 }
 

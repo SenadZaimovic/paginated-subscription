@@ -66,9 +66,6 @@ Meteor.subscribeWithPagination = function (/*name, arguments, perPage */) {
     perPage = lastArg;
   }
   var filter = args.pop();
-  if (!filter || !_.isObject(filter)) {
-    filter = {};
-  }
   var handle = new PaginatedSubscriptionHandle(perPage, filter);
 
   var argAutorun = Meteor.autorun(function() {
